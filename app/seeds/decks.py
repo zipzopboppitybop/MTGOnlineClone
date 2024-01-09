@@ -6,7 +6,7 @@ def seed_decks():
     deck1 = Deck(
         name='Goblins', userId=1, cardAmount=60,thumbnail="hello")
     deck2 = Deck(
-        name='Knights', userId=2, cardAmount=60,thumbnail="hello")
+        name='Knights', userId=1, cardAmount=60,thumbnail="hello")
 
 
     db.session.add(deck1)

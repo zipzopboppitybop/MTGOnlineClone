@@ -23,3 +23,13 @@ def user(id):
     """
     user = User.query.get(id)
     return user.to_dict()
+
+@user_routes.route('/<int:id>/decks')
+@login_required
+def userDecks(id):
+    """
+    Query for a user by id and returns decks created by that user is a list of deck dictionaries
+    """
+    user = User.query.get(id)
+    usersDecks = [deck.to_dict() for deck in user.decks]
+    return usersDecks

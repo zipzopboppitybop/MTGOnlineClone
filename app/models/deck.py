@@ -24,7 +24,6 @@ class Deck(db.Model):
             'name': self.name,
             'cardAmount': self.cardAmount,
             'thumbnail': self.thumbnail,
-            'owner': self.owner.to_dict(),
             'createdAt': self.createdAt,
             'updatedAt': self.updatedAt 
         }
