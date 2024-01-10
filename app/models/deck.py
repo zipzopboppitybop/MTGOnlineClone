@@ -8,10 +8,10 @@ class Deck(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(40), nullable=False, unique=True)
+    name = db.Column(db.String(50), nullable=False, unique=False)
     userId = db.Column(db.Integer, db.ForeignKey(
         add_prefix_for_prod('users.id')), nullable=False)
-    cardAmount = db.Column(db.Integer)
+    cardAmount = db.Column(db.Integer, default=0 )
     thumbnail = db.Column(db.String(255))
     createdAt = db.Column(db.DateTime, default=db.func.now())
     updatedAt = db.Column(db.DateTime, default=db.func.now())
@@ -24,6 +24,7 @@ class Deck(db.Model):
             'name': self.name,
             'cardAmount': self.cardAmount,
             'thumbnail': self.thumbnail,
+            'userId': self.userId,
             'createdAt': self.createdAt,
             'updatedAt': self.updatedAt 
         }
