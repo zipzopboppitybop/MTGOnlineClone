@@ -15,3 +15,14 @@ def decks():
     """
     decks = [deck.to_dict() for deck in Deck.query.all()]
     return decks
+
+@deck_routes.route('/<int:id>')
+def deck(id):
+    """
+    Query for a deck by id and return it in a dictionary
+    """
+    deck = Deck.query.get(id)
+    if deck is None:
+        return { 'errors': ['Deck not found!'] }, 404
+
+    return deck.to_dict()
