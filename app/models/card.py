@@ -42,5 +42,6 @@ class Card(db.Model):
             'allSets': self.allSets,
             'artist': self.artist,
             'thumbnail': self.thumbnail,
-            'color': self.color
+            'color': self.color,
+            'activateOnPlay': self.activateOnPlay
         }
