@@ -28,6 +28,7 @@ def deck(id):
 
     return deck.to_dict()
 
+
 @deck_routes.route("/create", methods=["POST"])
 @login_required
 def create_new_deck():
@@ -106,9 +107,28 @@ def edit_a_deck(id):
         return deck.to_dict()
         
 
-        
-
     if form.errors:
         print(form.errors)
         return { 'errors': form.errors }
     
+
+@deck_routes.route('/delete/<id>', methods=['DELETE'])
+@login_required
+def delete_a_deck(id):
+    """
+    Query for a deck user has created and delete it
+    """
+    user = current_user.to_dict()
+    deck = Deck.query.get(id)
+
+    if deck is None:
+        return { 'errors': ['Deck not found!'] }, 404
+
+    deck_dict = deck.to_dict()
+
+    if deck_dict["userId"] != user["id"]:
+        return { 'errors': ['Unathorized!'] }, 401
+
+    db.session.delete(deck)
+    db.session.commit()
+    return {"Message": "Deck Deleted Successfully"}
