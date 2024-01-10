@@ -28,7 +28,7 @@ def user(id):
 @login_required
 def userDecks(id):
     """
-    Query for a user by id and returns decks created by that user is a list of deck dictionaries
+    Query for a user by id and returns decks created by that user in a list of deck dictionaries
     """
     user = User.query.get(id)
     usersDecks = [deck.to_dict() for deck in user.decks]
