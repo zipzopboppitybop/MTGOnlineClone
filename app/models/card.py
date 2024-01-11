@@ -25,6 +25,9 @@ class Card(db.Model):
     color= db.Column(db.String(50), nullable=False)
     activateOnPlay = db.Column(db.Boolean, nullable=False)
 
+    deck = db.relationship("Deck", secondary="deck_list", back_populates="cards")
+
+
     def to_dict(self):
         return {
             'id': self.id,
