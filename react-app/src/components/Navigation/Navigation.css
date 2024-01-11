@@ -1,3 +1,16 @@
+body {
+  background-color: #181818;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
 .profile-dropdown {
   position: absolute;
 }
@@ -10,4 +23,11 @@
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+}
+
+#nav-bar-buttons {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
 }

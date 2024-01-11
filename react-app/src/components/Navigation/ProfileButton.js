@@ -39,15 +39,31 @@ function ProfileButton({ user }) {
 
   return (
     <>
+    {user ? (
       <button onClick={openMenu}>
-        {user ? (
-          <>
-          {user.username}
-          </>
-        ) : (
-          <>Login</>
-        )}
+        <i className="fas fa-user-circle" />
       </button>
+    ) : (
+          <>
+          <ul id="nav-bar-buttons">
+            <li>
+              <OpenModalButton
+                buttonText="Log In"
+                onItemClick={closeMenu}
+                modalComponent={<LoginFormModal />}
+              />
+            </li>
+            <li>
+              <OpenModalButton
+                buttonText="Sign Up"
+                onItemClick={closeMenu}
+                modalComponent={<SignupFormModal />}
+              />
+            </li>
+          </ul>
+          </>
+        )}
+
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
@@ -59,17 +75,6 @@ function ProfileButton({ user }) {
           </>
         ) : (
           <>
-            <OpenModalButton
-              buttonText="Log In"
-              onItemClick={closeMenu}
-              modalComponent={<LoginFormModal />}
-            />
-
-            <OpenModalButton
-              buttonText="Sign Up"
-              onItemClick={closeMenu}
-              modalComponent={<SignupFormModal />}
-            />
           </>
         )}
       </ul>
