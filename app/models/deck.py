@@ -26,6 +26,7 @@ class Deck(db.Model):
             'cardAmount': self.cardAmount,
             'thumbnail': self.thumbnail,
             'userId': self.userId,
+            'cards': [card.to_dict() for card in self.cards],
             'createdAt': self.createdAt,
             'updatedAt': self.updatedAt 
         }
