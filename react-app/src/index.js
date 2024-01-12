@@ -6,6 +6,7 @@ import "./fonts/Mtg/Goudy Mediaeval Regular.ttf"
 import { ModalProvider, Modal } from "./context/Modal";
 import configureStore from "./store";
 import * as sessionActions from "./store/session";
+import * as deckActions from "./store/deck";
 import App from "./App";
 
 import "./index.css";
@@ -15,6 +16,7 @@ const store = configureStore();
 if (process.env.NODE_ENV !== "production") {
 	window.store = store;
 	window.sessionActions = sessionActions;
+	window.deckActions = deckActions;
 }
 
 // Wrap the application with the Modal provider and render the Modal component

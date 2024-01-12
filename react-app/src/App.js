@@ -5,7 +5,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
-import LandingPage from "./components/LandingPage";
+import Feed from "./components/Decks/Feed";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function App() {
       {isLoaded && (
         <Switch>
           <Route path="/">
-            <LandingPage />
+            <Feed />
           </Route>
           <Route path="/login" >
             <LoginFormPage />
