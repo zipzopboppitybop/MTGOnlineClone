@@ -34,8 +34,6 @@ const Feed = () => {
             <Loading />
         )}
         </>
-
-
     )
 }
 
