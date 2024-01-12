@@ -3,6 +3,11 @@ body {
   color: white;
 }
 
+#logo {
+  font-family: "Goudy Mediaeval";
+  font-size: 2rem;
+}
+
 a{
   text-decoration: none;
 }
@@ -31,3 +36,4 @@ a:visited {
   justify-content: space-between;
   width: 8rem;
 }
+

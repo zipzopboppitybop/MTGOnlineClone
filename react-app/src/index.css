@@ -1,1 +1,7 @@
 /* TODO Add site wide styles */
+@font-face {
+    font-family: "Goudy Mediaeval";
+    src: local("Goudy Mediaeval"),
+     url("./fonts/Mtg/Goudy\ Mediaeval\ Regular.ttf") format("truetype");
+    font-weight: bold;
+   }
