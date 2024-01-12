@@ -34,6 +34,19 @@ a:visited {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 8rem;
+  width: 7rem;
 }
+
+button {
+  background-color: #181818;
+  border: none;
+  color: white;
+  transition: color .2s ease-out;
+}
+
+button:hover {
+  cursor: pointer;
+  color: orange;
+}
+
 
