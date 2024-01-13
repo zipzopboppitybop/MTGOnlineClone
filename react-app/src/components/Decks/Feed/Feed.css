@@ -1,0 +1,20 @@
+.deck-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.deck-item {
+    background-color: #242221;
+    border: solid 1px gray;
+    border-radius: .5rem;
+}
+
+.image-container {
+    
+}
+
+.thumbnail {
+    width: 20rem;
+    height: 10rem;
+}

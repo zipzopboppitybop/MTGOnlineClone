@@ -4,7 +4,7 @@ from sqlalchemy.sql import text
 
 def seed_decks():
     deck1 = Deck(
-        name='Goblins', userId=1, cardAmount=60,thumbnail="hello")
+        name='Goblins', userId=1, cardAmount=60)
     deck2 = Deck(
         name='Knights', userId=1, cardAmount=60,thumbnail="hello")
 
