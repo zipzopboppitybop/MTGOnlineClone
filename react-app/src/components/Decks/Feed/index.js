@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { thunkGetAllDecks } from '../../../store/deck';
 import Loading from '../../LoadingScreen';
+import DeckItem from '../DeckItem';
 import "./Feed.css"
 
 
@@ -23,7 +24,7 @@ const Feed = () => {
                 {Object?.values(decks)?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(deck =>
                 (
                     <li key={deck?.id} className="deck-item">
-                        hello
+                        <DeckItem deck={deck} />
                     </li>
                 )
                 )
