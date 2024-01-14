@@ -27,6 +27,7 @@ class Deck(db.Model):
             'thumbnail': self.thumbnail,
             'userId': self.userId,
             'cards': [card.to_dict() for card in self.cards],
+            'owner': self.owner.to_dict(),
             'createdAt': self.createdAt,
             'updatedAt': self.updatedAt 
         }

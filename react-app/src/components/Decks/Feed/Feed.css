@@ -1,20 +1,31 @@
+.feed {
+    margin-bottom: 5rem;
+}
+
+#feed-headline {
+    text-emphasis: none;
+    text-align: center;
+    font-family: "Goudy Mediaeval";
+}
+
 .deck-list {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 2rem;
 }
 
 .deck-item {
     background-color: #242221;
     border: solid 1px gray;
     border-radius: .5rem;
-}
-
-.image-container {
-    
+    margin: 1rem;
+    cursor: pointer;
 }
 
 .thumbnail {
     width: 20rem;
     height: 10rem;
 }
+

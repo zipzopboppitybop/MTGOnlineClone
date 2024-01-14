@@ -9,15 +9,13 @@ import "./Feed.css"
 const Feed = () => {
     const dispatch = useDispatch()
     const decks = useSelector(state => state.decks.deckList);
-    const sessionUser = useSelector(state => state.session.user);
     useEffect(() => {
         dispatch(thunkGetAllDecks())
     }, [dispatch,])
 
-    // console.log(decks)
-
     return (
         <>
+        <h4 id='feed-headline'>All Decks</h4>
         {decks ? (
             <div className='feed'>
             <ul className='deck-list'>
