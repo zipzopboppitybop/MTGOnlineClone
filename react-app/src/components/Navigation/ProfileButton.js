@@ -79,7 +79,7 @@ function ProfileButton({ user }) {
               </li>
             <li className="profile-dropdown-button">
               <button className="profile-dropdown-button" onClick={handleLogout}>
-                <i class="fa fa-sign-out"></i>
+                <i className="fa fa-sign-out"></i>
                 &nbsp;
                 Log Out
               </button>

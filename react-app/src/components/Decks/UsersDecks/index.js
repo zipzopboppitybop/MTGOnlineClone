@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { thunkGetAllDecks } from '../../../store/deck';
+import { thunkGetUserDecks } from '../../../store/deck';
+import { useParams } from "react-router-dom";
 import Loading from '../../LoadingScreen';
 import DeckItem from '../DeckItem';
 import "./UsersDecks.css"
@@ -8,10 +9,11 @@ import "./UsersDecks.css"
 
 const UserDecks = () => {
     const dispatch = useDispatch()
-    const decks = useSelector(state => state.decks.deckList);
+    const { id } = useParams();
     useEffect(() => {
-        dispatch(thunkGetAllDecks())
+        dispatch(thunkGetUserDecks(id))
     }, [dispatch,])
+    const decks = useSelector(state => state.decks.deckList);
 
     return (
         <>
