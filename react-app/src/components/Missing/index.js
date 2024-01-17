@@ -9,7 +9,7 @@ const MissingUser = () => {
     useEffect(()=>{
       setTimeout(function() {
         setShowElement(false)
-           }, 3000);
+           }, 2000);
          },
       
      [])

@@ -24,17 +24,7 @@ const UserDeckItem = ({decks, viewUser}) => {
         ) : (
             <div className='feed'>
             <h1 id='feed-headline'>{viewUser.username} Has No Decks</h1>
-            <ul className='decks-list'>
-                {Object?.values(decks)?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(deck =>
-                (
-                    <li key={deck?.id} className="deck-item">
-                        <DeckItem deck={deck} />
-                    </li>
-                )
-                )
-                }
-        </ul>
-        </div>
+            </div>
         )}
         </>
     )
