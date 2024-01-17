@@ -84,6 +84,7 @@ function ProfileButton({ user }) {
                 Log Out
               </button>
             </li>
+            <li>{user.username}</li>
           </>
         ) : (
           <>

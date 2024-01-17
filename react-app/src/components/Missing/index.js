@@ -1,11 +1,28 @@
 import React from 'react';
+import { useEffect } from 'react';
+import Loading from '../LoadingScreen';
+import "./MissingUser.css";
 
 
 const MissingUser = () => {
+    const [showElement,setShowElement] = React.useState(true)
+    useEffect(()=>{
+      setTimeout(function() {
+        setShowElement(false)
+           }, 5000);
+         },
+     [])
 
     return (
         <>
-        <h1>User Could Not Be Found</h1>
+        {showElement ? (
+            <div>
+                <Loading></Loading>
+            </div>
+        ) : (
+            <h1 className='missing-header'>User Could Not Be Found</h1>
+        )}
+        
         </>
     )
 }

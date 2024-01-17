@@ -1,6 +1,7 @@
 // constants
 const SET_USER = "session/SET_USER";
 const REMOVE_USER = "session/REMOVE_USER";
+const VIEW_USER = "session/VIEW_USER";
 
 const setUser = (user) => ({
 	type: SET_USER,
@@ -10,6 +11,11 @@ const setUser = (user) => ({
 const removeUser = () => ({
 	type: REMOVE_USER,
 });
+
+const viewUser = (user) => ({
+	type: VIEW_USER,
+	payload: user
+})
 
 const initialState = { user: null };
 
@@ -26,6 +32,23 @@ export const authenticate = () => async (dispatch) => {
 		}
 
 		dispatch(setUser(data));
+	}
+};
+
+export const thunkViewUser = (id) => async (dispatch) => {
+	const response = await fetch(`/api/users/${id}`)
+
+	if (response.ok) {
+		const data = await response.json();
+		dispatch(viewUser(data));
+		return null;
+	} else if (response.status < 500) {
+		const data = await response.json();
+		if (data.errors) {
+			return data.errors;
+		}
+	} else {
+		return ["An error occurred. Please try again."];
 	}
 };
 
@@ -97,9 +120,11 @@ export const signUp = (username, email, password) => async (dispatch) => {
 export default function reducer(state = initialState, action) {
 	switch (action.type) {
 		case SET_USER:
-			return { user: action.payload };
+			return { ...state, user: action.payload };
 		case REMOVE_USER:
 			return { user: null };
+		case VIEW_USER:
+			return {...state, viewUser: action.payload}
 		default:
 			return state;
 	}

@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/">
             <Feed />
           </Route>
-          <Route exact path="/decks/:id">
+          <Route exact path="/:id/decks">
             <UserDecks />
           </Route>
           <Route path="loading">
