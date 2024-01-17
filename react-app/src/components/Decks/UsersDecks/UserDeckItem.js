@@ -1,9 +1,4 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { thunkGetUserDecks } from '../../../store/deck';
-import { thunkViewUser } from '../../../store/session';
-import { useParams } from "react-router-dom";
-import Loading from '../../LoadingScreen';
+import React from 'react';
 import DeckItem from '../DeckItem';
 import "./UsersDecks.css"
 

@@ -4,6 +4,7 @@ import { logout } from "../../store/session";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
@@ -72,11 +73,13 @@ function ProfileButton({ user }) {
               &nbsp;
               New Deck
             </li>
-            <li className="profile-dropdown-button">
-              <i className="fa fa-folder"></i>
-              &nbsp;
-              My Decks
+            <NavLink to={`/${user.id}/decks`}>
+              <li className="profile-dropdown-button">
+                <i className="fa fa-folder"></i>
+                &nbsp;
+                My Decks
               </li>
+            </NavLink>
             <li className="profile-dropdown-button">
               <button className="profile-dropdown-button" onClick={handleLogout}>
                 <i className="fa fa-sign-out"></i>
@@ -84,7 +87,6 @@ function ProfileButton({ user }) {
                 Log Out
               </button>
             </li>
-            <li>{user.username}</li>
           </>
         ) : (
           <>
