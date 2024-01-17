@@ -35,14 +35,14 @@ export const thunkGetUserDecks = (id) => async (dispatch) => {
     }
 }
 
-const initialState = { deckList: null }
+const initialState = { deckList: null, userDeckList: null }
 
 export default function deckReducer(state = initialState, action) {
     switch (action.type) {
         case GET_DECKS:
             return { ...state, deckList: action.decks };
         case GET_USER_DECKS:
-            return {...state, deckList: action.decks};
+            return {...state, userDeckList: action.decks};
         default:
             return state;
     }
