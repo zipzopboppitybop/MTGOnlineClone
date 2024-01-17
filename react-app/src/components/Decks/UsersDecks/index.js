@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { thunkGetAllDecks } from '../../../store/deck';
 import Loading from '../../LoadingScreen';
 import DeckItem from '../DeckItem';
-import "./Feed.css"
+import "./UsersDecks.css"
 
 
-const Feed = () => {
+const UserDecks = () => {
     const dispatch = useDispatch()
     const decks = useSelector(state => state.decks.deckList);
     useEffect(() => {
@@ -15,8 +15,8 @@ const Feed = () => {
 
     return (
         <>
-        <h4 id='feed-headline'>Recent Decks</h4>
-        {decks ? (
+        <h4 id='feed-headline'>Hello</h4>
+        {/* {decks ? (
             <div className='feed'>
             <ul className='decks-list'>
                 {Object?.values(decks)?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(deck =>
@@ -31,9 +31,9 @@ const Feed = () => {
         </div>
         ) : (
             <Loading />
-        )}
+        )} */}
         </>
     )
 }
 
-export default Feed;
+export default UserDecks;

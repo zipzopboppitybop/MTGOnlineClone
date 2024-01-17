@@ -8,7 +8,7 @@
     font-family: "Goudy Mediaeval";
 }
 
-.deck-list {
+.decks-list {
     display: flex;
     list-style: none;
     justify-content: center;
