@@ -17,7 +17,7 @@ const viewUser = (user) => ({
 	payload: user
 })
 
-const initialState = { user: null };
+const initialState = { user: null, viewUser: null };
 
 export const authenticate = () => async (dispatch) => {
 	const response = await fetch("/api/auth/", {
