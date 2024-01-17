@@ -18,6 +18,23 @@ a:visited {
 
 .profile-dropdown {
   position: absolute;
+  list-style: none;
+  background-color: #232323;
+  margin-left: -4.5rem;
+  margin-top: .5rem;
+  text-align: left;
+  padding: 1rem;
+  padding-right: 3rem;
+  padding-bottom: 0rem;
+  border-radius: .5rem;
+}
+
+.profile-dropdown-button {
+  background-color: #232323;
+  font-size: 1rem;
+  padding: 0;
+  margin-bottom: .5rem;
+  transition: color .2s ease-out;
 }
 
 .hidden {
@@ -44,46 +61,11 @@ button {
   transition: color .2s ease-out;
 }
 
-button:hover, .footer-item:hover {
+button:hover, .footer-item:hover, .profile-dropdown-button:hover {
   cursor: pointer;
   color: orange;
 }
 
 .fa-user-circle {
   font-size: 1.5rem;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  background-color: #242221;
-  width: 100%;
-  height: 5rem;
-  left: 0;
-
-}
-
-.footer-container {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-around;
-  
-}
-
-.me {
-  width: 3rem;
-  border-radius: 50%;
-}
-
-.footer-item {
-  display: flex;
-  align-items: center;
-  vertical-align: center;
-  font-size: 1.5rem;
-  transition: color .2s ease-out;
-}
-
-.fa {
-  font-size: 3rem;
 }

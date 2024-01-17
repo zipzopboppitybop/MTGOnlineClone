@@ -15,7 +15,7 @@ const Feed = () => {
 
     return (
         <>
-        <h4 id='feed-headline'>All Decks</h4>
+        <h4 id='feed-headline'>Recent Decks</h4>
         {decks ? (
             <div className='feed'>
             <ul className='deck-list'>

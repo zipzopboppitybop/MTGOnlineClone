@@ -1,6 +1,6 @@
 import React from "react";
 import me from "../../images/BrianWashingtonJr.jpg"
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import "./Footer.css"
 
  
 const Footer = () => {
@@ -17,18 +17,18 @@ const Footer = () => {
                 &nbsp;
                 bw49078@gmail.com
             </li>
-            <a href="https://www.linkedin.com/in/brian-washington-668129244/" target="_blank">
+            <a href="https://www.linkedin.com/in/brian-washington-668129244/" target="_blank" rel="noreferrer">
                 <li className="footer-item">
                     Linkedin:
                     &nbsp;
-                    <i class="fa fa-linkedin-square" ></i>
+                    <i className="fa fa-linkedin-square footer-icon" ></i>
                 </li>
             </a>
-            <a href="https://github.com/zipzopboppitybop" target="_blank">
+            <a href="https://github.com/zipzopboppitybop" target="_blank" rel="noreferrer"> 
                 <li className="footer-item">
                     Github:
                     &nbsp;
-                    <i class="fa fa-github"></i>
+                    <i className="fa fa-github footer-icon"></i>
                 </li>
             </a>
 

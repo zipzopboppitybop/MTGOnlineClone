@@ -67,9 +67,22 @@ function ProfileButton({ user }) {
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <li>Decks</li>
-            <li>
-              <button onClick={handleLogout}>Log Out</button>
+            <li className="profile-dropdown-button">
+              <i className="fas fa-plus"></i>
+              &nbsp;
+              New Deck
+            </li>
+            <li className="profile-dropdown-button">
+              <i className="fa fa-folder"></i>
+              &nbsp;
+              My Decks
+              </li>
+            <li className="profile-dropdown-button">
+              <button className="profile-dropdown-button" onClick={handleLogout}>
+                <i class="fa fa-sign-out"></i>
+                &nbsp;
+                Log Out
+              </button>
             </li>
           </>
         ) : (
