@@ -1,0 +1,39 @@
+.user-page-div {
+    position: relative;
+    display: flex;
+    background-color: #242221;
+    border: solid 1px gray;
+    width: 90%;
+    left: 5%;
+    box-shadow: 5px 3px 5px black;
+    border-radius: .4rem;
+}
+
+.user-page-profile-pic {
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-left: 9%;
+    margin-top: 6%;
+}
+
+.user-name {
+    margin-left: 2%;
+    text-align: center;
+}
+
+hr {
+    margin-left: -100%;
+    width: 300%; 
+}
+
+.user-stuff {
+    text-align: left;
+    margin-left: -100%;
+}
+
+.user-bio {
+    margin-left: 10%;
+}

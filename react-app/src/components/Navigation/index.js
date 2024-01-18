@@ -14,7 +14,6 @@ function Navigation({ isLoaded }){
 				<li id='logo'>
 					<NavLink exact to="/">Primal Spiral</NavLink>
 				</li>
-				<li>hello</li>
 				{isLoaded && (
 					<li>
 						<ProfileButton user={sessionUser} />

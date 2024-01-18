@@ -45,7 +45,7 @@ function ProfileButton({ user }) {
     <>
     {user ? (
       <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
+        <i className="fas fa-user-circle profile-icon" />
         &nbsp;
         &nbsp;
         {user.username}
@@ -84,6 +84,13 @@ function ProfileButton({ user }) {
                 <i className="fa fa-folder"></i>
                 &nbsp;
                 My Decks
+              </li>
+            </NavLink>
+            <NavLink to={`/${user.id}`}>
+              <li className="profile-dropdown-button">
+                <i className="fas fa-user-circle" />
+                &nbsp;
+                My Profile
               </li>
             </NavLink>
             <li className="profile-dropdown-button">

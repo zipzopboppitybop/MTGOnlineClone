@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import Feed from "./components/Decks/Feed";
 import Loading from "./components/LoadingScreen";
 import UserDecks from "./components/Decks/UsersDecks";
+import UserPage from "./components/UsersPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Feed />
+          </Route>
+          <Route exact path="/:id">
+            <UserPage />
           </Route>
           <Route exact path="/:id/decks">
             <UserDecks />

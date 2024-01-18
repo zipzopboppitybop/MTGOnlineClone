@@ -16,6 +16,11 @@ a:visited {
   color: white;
 }
 
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+
 .profile-dropdown {
   position: absolute;
   list-style: none;
@@ -45,6 +50,8 @@ a:visited {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 #nav-bar-buttons {
@@ -64,8 +71,4 @@ button {
 button:hover, .footer-item:hover, .profile-dropdown-button:hover {
   cursor: pointer;
   color: orange;
-}
-
-.fa-user-circle {
-  font-size: 1.5rem;
 }

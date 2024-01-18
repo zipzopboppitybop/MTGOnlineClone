@@ -4,7 +4,7 @@ import { thunkGetUserDecks } from '../../../store/deck';
 import { thunkViewUser } from '../../../store/session';
 import { useParams } from "react-router-dom";
 import "./UsersDecks.css"
-import MissingUser from '../../Missing';
+import MissingUser from '../../Missing/MissingUser';
 import UserDeckItem from './UserDeckItem';
 
 const UserDecks = () => {
