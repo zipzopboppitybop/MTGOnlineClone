@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/">
             <Feed />
           </Route>
-          <Route exact path="/:id">
+          <Route exact path="/users/:id">
             <UserPage />
           </Route>
           <Route exact path="/:id/decks">
