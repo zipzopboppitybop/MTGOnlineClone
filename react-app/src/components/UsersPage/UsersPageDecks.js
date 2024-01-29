@@ -5,7 +5,7 @@ import { thunkViewUser } from '../../store/session';
 import { useParams } from "react-router-dom";
 import "../Decks/UsersDecks/UsersDecks.css"
 import MissingUser from '../Missing/MissingUser';
-import UserDeckItem from '../Decks/UsersDecks/UserDeckItem';
+import UsersPageDeckItem from './UsersPageDeckItem';
 
 const UserPageDecks = () => {
     const dispatch = useDispatch()
@@ -21,7 +21,7 @@ const UserPageDecks = () => {
         <>
         {viewUser ? (
             <div>
-                <UserDeckItem decks={decks} viewUser={viewUser} />
+                <UsersPageDeckItem decks={decks} viewUser={viewUser} />
             </div>
         ) : (
             <div>
