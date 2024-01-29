@@ -13,6 +13,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
+    bio = db.Column(db.String(255))
     profile_pic = db.Column(db.String(255))
 
     decks = db.relationship('Deck', back_populates='owner', cascade='all, delete-orphan')
@@ -34,5 +35,6 @@ class User(db.Model, UserMixin):
             'username': self.username,
             'email': self.email,
             'profile_pic': self.profile_pic,
+            'bio': self.bio,
             'decks': [deck.id for deck in self.decks]
         }

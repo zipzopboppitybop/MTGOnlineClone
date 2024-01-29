@@ -25,7 +25,7 @@ const UserPage = () => {
             <div className='user-page-div'>
             <div className='user-info'>
                 {viewUser.profile_pic ? (
-                    <img className='user-page-profile-pic' ></img>
+                    <img alt='Cannot Load' className='user-page-profile-pic' ></img>
                     
                 ) : (
                     <i className="fas fa-user-circle user-page-profile-pic"  style={{fontSize: 6 + "rem"}}/>
@@ -36,9 +36,16 @@ const UserPage = () => {
                 <p className='user-stuff'>Decks; {viewUser.decks.length}</p>
             </div>
             
-            <div className='user-bio'>
-                <p>Hello</p>
+            {viewUser.bio ? (
+                            <div className='user-bio'>
+                            <p className='bio'>{viewUser.bio}</p>
+                        </div>
+            ) : (
+                <div className='user-bio'>
+                <p className='no-bio'>This User does not have a bio!</p>
             </div>
+            )}
+
         </div>
         )}  
         </>

@@ -37,3 +37,10 @@ hr {
 .user-bio {
     margin-left: 10%;
 }
+
+.no-bio {
+    color: gray;
+    text-align: center;
+    margin-left: 20rem;
+    margin-top: 8rem;
+}

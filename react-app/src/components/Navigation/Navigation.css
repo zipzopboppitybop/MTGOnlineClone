@@ -32,6 +32,7 @@ a:visited {
   padding-right: 3rem;
   padding-bottom: 0rem;
   border-radius: .5rem;
+  z-index: 3;
 }
 
 .profile-dropdown-button {

@@ -86,7 +86,7 @@ function ProfileButton({ user }) {
                 My Decks
               </li>
             </NavLink>
-            <NavLink to={`/${user.id}`}>
+            <NavLink to={`/users/${user.id}`}>
               <li className="profile-dropdown-button">
                 <i className="fas fa-user-circle" />
                 &nbsp;
