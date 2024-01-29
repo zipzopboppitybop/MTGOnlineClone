@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { thunkGetUserDecks } from '../../store/deck';
 import { thunkViewUser } from '../../store/session';
 import MissingUser from '../Missing/MissingUser';
+import UserPageDecks from './UsersPageDecks';
 import "./UserPage.css";
 
 
@@ -16,12 +17,12 @@ const UserPage = () => {
     }, [dispatch, id])
     const viewUser = useSelector(state => state.session.viewUser);
 
-
     return (
         <>
         {!viewUser ? (
             <MissingUser />
         ) : (
+            <>
             <div className='user-page-div'>
             <div className='user-info'>
                 {viewUser.profile_pic ? (
@@ -45,9 +46,18 @@ const UserPage = () => {
                 <p className='no-bio'>This User does not have a bio!</p>
             </div>
             )}
-
-        </div>
+            </div>
+            <div className='user-decks'>
+                <h2 >Recent Decks</h2>
+                {viewUser.decks.length > 0 ? (
+                    <UserPageDecks />
+                ) : (
+                    <p>This user has no decks!</p>
+                )}
+            </div>
+          </>
         )}  
+        
         </>
     )
 }

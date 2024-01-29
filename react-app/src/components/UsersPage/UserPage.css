@@ -1,7 +1,7 @@
 .user-page-div {
     position: relative;
     display: flex;
-    background-color: #242221;
+    background-color: #232323;
     border: solid 1px gray;
     width: 90%;
     left: 5%;
@@ -43,4 +43,9 @@ hr {
     text-align: center;
     margin-left: 20rem;
     margin-top: 8rem;
+}
+
+.user-decks {
+    margin-left: 3.5rem;
+    margin-top: 2rem;
 }
