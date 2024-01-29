@@ -93,6 +93,13 @@ function ProfileButton({ user }) {
                 My Profile
               </li>
             </NavLink>
+            <NavLink to={`/users/${user.id}`}>
+              <li className="profile-dropdown-button">
+                <i className="fas fa-gear" />
+                &nbsp;
+                User Settings
+              </li>
+            </NavLink>
             <li className="profile-dropdown-button">
               <button className="profile-dropdown-button" onClick={handleLogout}>
                 <i className="fa fa-sign-out"></i>
