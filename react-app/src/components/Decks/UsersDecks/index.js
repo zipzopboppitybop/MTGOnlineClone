@@ -22,7 +22,7 @@ const UserDecks = () => {
         {viewUser ? (
             <>
             <h1 id='feed-headline'>{viewUser.username}'s Decks</h1>
-            <h4 id='feed-headline'>Total Results: {decks.length}</h4>
+            <h4 id='feed-headline'>Total Results: {viewUser.decks.length}</h4>
             <div>
                 <UserDeckItem decks={decks} viewUser={viewUser} />
             </div>

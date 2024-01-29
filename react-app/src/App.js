@@ -28,19 +28,9 @@ function App() {
           <Route exact path="/users/:id">
             <UserPage />
           </Route>
-          <Route exact path="/:id/decks">
+          <Route exact path="/users/:id/decks">
             <UserDecks />
           </Route>
-          <Route path="loading">
-            <Loading />
-          </Route>
-          <Route path="/login" >
-            <LoginFormPage />
-          </Route>
-          <Route path="/signup">
-            <SignupFormPage />
-          </Route>
-
         </Switch>
       )}
     </>
