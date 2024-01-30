@@ -1,0 +1,16 @@
+.user-page-decks-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -8rem;
+}
+
+.user-page-deck-item {
+    background-color: #242221;
+    border: solid 1px gray;
+    border-radius: .5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 15rem;
+}

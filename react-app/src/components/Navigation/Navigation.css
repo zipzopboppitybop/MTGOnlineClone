@@ -62,14 +62,14 @@ a:visited {
   width: 7rem;
 }
 
-button {
+button, #all-decks {
   background-color: #181818;
   border: none;
   color: white;
   transition: color .2s ease-out;
 }
 
-button:hover, .footer-item:hover, .profile-dropdown-button:hover {
+button:hover, .footer-item:hover, .profile-dropdown-button:hover, #all-decks:hover {
   cursor: pointer;
   color: orange;
 }

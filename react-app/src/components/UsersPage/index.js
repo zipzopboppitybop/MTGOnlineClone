@@ -6,6 +6,7 @@ import { thunkViewUser } from '../../store/session';
 import MissingUser from '../Missing/MissingUser';
 import UserPageDecks from './UsersPageDecks';
 import "./UserPage.css";
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const UserPage = () => {
@@ -48,7 +49,16 @@ const UserPage = () => {
             )}
             </div>
             <div className='user-decks'>
-                <h2 >Recent Decks</h2>
+                <div className='user-decks-headers'>
+                    <h2 >Recent Decks</h2>
+                    <NavLink href="#" to={`/users/${viewUser.id}/decks`}>
+                        <h2 id="all-decks">
+                            View All Decks 
+                            &nbsp;
+                            <i className="fas fa-arrow-right" />
+                        </h2>
+                    </NavLink>
+                </div>
                 {viewUser.decks.length > 0 ? (
                     <UserPageDecks />
                 ) : (

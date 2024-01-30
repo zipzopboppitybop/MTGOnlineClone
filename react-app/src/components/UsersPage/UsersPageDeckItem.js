@@ -4,16 +4,18 @@ import "../Decks/UsersDecks/UsersDecks.css"
 
 const UsersPageDeckItem = ({decks, viewUser}) => {
     let userDecks = "";
-    if (decks.length > 0) userDecks = decks.slice(0,4);
+
+    if (decks) userDecks = decks.slice(0,4);
+    else userDecks = "";
 
     return (
         <>
         {decks?.length ? (
             <div className='feed'>
-                <ul className='decks-list'>
+                <ul className='user-page-decks-list'>
                     {Object?.values(userDecks)?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(deck =>
                     (
-                        <li key={deck?.id} className="deck-item">
+                        <li key={deck?.id} className="user-page-deck-item">
                             <DeckItem deck={deck} />
                         </li>
                     )
