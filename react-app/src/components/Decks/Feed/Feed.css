@@ -29,3 +29,11 @@
     height: 10rem;
 }
 
+.deck-owner-name {
+    color: gray;
+}
+
+.deck-name {
+    text-align: center;
+    width: 100%;
+}

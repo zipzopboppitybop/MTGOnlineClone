@@ -45,7 +45,12 @@ function ProfileButton({ user }) {
     <>
     {user ? (
       <button onClick={openMenu}>
-        <i className="fas fa-user-circle profile-icon" />
+        {user.profile_pic ? (
+          <img src={user.profile_pic} alt="Couldn't Load!" />
+        ) : (
+          <i className="fas fa-user-circle profile-icon" />
+        )}
+        
         &nbsp;
         &nbsp;
         {user.username}

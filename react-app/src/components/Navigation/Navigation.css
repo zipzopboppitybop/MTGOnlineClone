@@ -69,7 +69,7 @@ button, #all-decks {
   transition: color .2s ease-out;
 }
 
-button:hover, .footer-item:hover, .profile-dropdown-button:hover, #all-decks:hover {
+button:hover, .footer-item:hover, .profile-dropdown-button:hover, #all-decks:hover, .deck-owner-name:hover {
   cursor: pointer;
   color: orange;
 }
