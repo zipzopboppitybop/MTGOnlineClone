@@ -22,9 +22,10 @@ def card(name):
     """
     Query for a card by name and return it in a dictionary
     """
-    cards = [{"cardName": card.name, "cardId": card.id} for card in Card.where(name=name).all()]
+    cards = [card.__dict__ for card in Card.where(name=name).all()]
     if cards is None:
         return { 'errors': ['Cards not found!'] }, 404
 
     return cards
+
 

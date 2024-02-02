@@ -17,7 +17,7 @@ class Deck(db.Model):
     updatedAt = db.Column(db.DateTime, default=db.func.now())
 
     owner = db.relationship('User', back_populates='decks')
-    cards = db.relationship("Card", secondary="deck_list", back_populates="deck")
+    # cards = db.relationship("Card", secondary="deck_list", back_populates="deck")
 
     def to_dict(self):
         return {
@@ -26,7 +26,7 @@ class Deck(db.Model):
             'cardAmount': self.cardAmount,
             'thumbnail': self.thumbnail,
             'userId': self.userId,
-            'cards': [card.to_dict() for card in self.cards],
+            # 'cards': [card.to_dict() for card in self.cards],
             'owner': self.owner.to_dict(),
             'createdAt': self.createdAt,
             'updatedAt': self.updatedAt 

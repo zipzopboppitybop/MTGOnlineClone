@@ -1,9 +1,10 @@
 from flask import Blueprint, request
 from flask_login import login_required, current_user
-from app.models import Deck, Card, db, User
+from app.models import Deck, db, User
 from .auth_routes import validation_errors_to_error_messages
 from app.forms import DeckForm
 from datetime import date
+from mtgsdk import Card, Set
 
 deck_routes = Blueprint('decks', __name__)
 
@@ -134,40 +135,37 @@ def delete_a_deck(id):
     return {"Message": "Deck Deleted Successfully"}
 
 
-@deck_routes.route('/<int:deckId>/<int:cardId>/add')
+@deck_routes.route('/<int:deckId>/<cardId>/add')
 @login_required
 def add_card(deckId, cardId):
     """
     Add card to deck
     """
     deck = Deck.query.get(deckId)
-    card = Card.query.get(cardId)
-    deck_dict = deck.to_dict()
-    card_dict = card.to_dict()
-    id = card_dict['id'] - 1
-    if deck is None:
-        return {'errors': ['Deck not found']}, 404
-    if card in deck.cards:
-        return deck_dict['cards'][id]
+    card = Card.find(cardId).__dict__
+    # if deck is None:
+    #     return {'errors': ['Deck not found']}, 404
+    # if card in deck.cards:
+    #     return deck_dict['cards'][card.id]
     deck.cards.append(card)
     db.session.commit()
-    return {'message': "Card Successfully added to deck list"}
+    return {"Message": "Card added to deck successfully!"}
 
 
-@deck_routes.route('/<int:deckId>/<int:cardId>/remove')
-@login_required
-def remove_card(deckId, cardId):
-    """
-    remove card from deck
-    """
-    deck = Deck.query.get(deckId)
-    current_card = Card.query.get(cardId)
-    if deck is None:
-        return {'errors': ['Deck not found']}, 404
-    for card in deck.cards:
-        if card.id == current_card.id:
-            deck.cards.remove(card)
-            db.session.commit()
-            return {'message': "Card Successfully removed deck list"}
+# @deck_routes.route('/<int:deckId>/<int:cardId>/remove')
+# @login_required
+# def remove_card(deckId, cardId):
+#     """
+#     remove card from deck
+#     """
+#     deck = Deck.query.get(deckId)
+#     current_card = Card.query.get(cardId)
+#     if deck is None:
+#         return {'errors': ['Deck not found']}, 404
+#     for card in deck.cards:
+#         if card.id == current_card.id:
+#             deck.cards.remove(card)
+#             db.session.commit()
+#             return {'message': "Card Successfully removed deck list"}
     
-    return {"errors": ['Card is not in deck']}, 400
+#     return {"errors": ['Card is not in deck']}, 400
