@@ -13,7 +13,7 @@ def cards():
     """
     Query for all cards and returns them is a list of dictionaries
     """
-    cards = [card.name for card in Card.where(page=5).where(pageSize=100).all()]
+    cards = [{"card": card.__dict__} for card in Card.where(page=1).where(pageSize=100).all()]
     return cards
 
 
@@ -22,10 +22,10 @@ def card(name):
     """
     Query for a card by name and return it in a dictionary
     """
-    cards = [card.__dict__ for card in Card.where(name=name).all()]
-    if cards is None:
+    card = Card.find(name)
+    if card is None:
         return { 'errors': ['Cards not found!'] }, 404
 
-    return cards
+    return card.__dict__
 
 
