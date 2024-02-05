@@ -1,0 +1,47 @@
+.main-searchbar-div {
+    background-color: #181818;
+    height: 3rem;
+    width: 27.5rem;
+    border: solid 1px gray;
+    border-radius: .5rem;
+    margin: 1rem;
+    align-items: center;
+    display: flex;
+    border-color: gray;
+    border-style: solid;
+    border-width: .01rem;
+    margin-left: 33%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-searchbar {
+    background-color: #181818;
+    height: 2rem;
+    width: 24rem;
+    border: 0px;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+.main-searchbar::placeholder {
+    color: #e3e3e3;
+}
+
+.fa-search:hover {
+    cursor: text;
+}
+
+.main-searchbar:focus {
+    outline: none;
+}
+
+.main-searchbar::placeholder:focus {
+    color: black
+}
+
+.main-searchbar-div:focus {
+    outline-color: yellow;
+    border-color: yellow;
+}
