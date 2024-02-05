@@ -1,4 +1,8 @@
-.missing-header {
+.missing-header, .missing-deck-header {
     text-align: center;
-    
 }
+
+.loading-deck {
+    margin-left: -7rem;
+    margin-top: -5rem;
+} 

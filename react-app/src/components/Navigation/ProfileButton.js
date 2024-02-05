@@ -84,18 +84,18 @@ function ProfileButton({ user }) {
               &nbsp;
               New Deck
             </li>
-            <NavLink href="#" to={`/users/${user.id}/decks`}>
-              <li className="profile-dropdown-button">
-                <i className="fa fa-folder"></i>
-                &nbsp;
-                My Decks
-              </li>
-            </NavLink>
             <NavLink to={`/users/${user.id}`}>
               <li className="profile-dropdown-button">
                 <i className="fas fa-user-circle" />
                 &nbsp;
                 My Profile
+              </li>
+            </NavLink>
+            <NavLink href="#" to={`/users/${user.id}/decks`}>
+              <li className="profile-dropdown-button">
+                <i className="fa fa-folder"></i>
+                &nbsp;
+                My Decks
               </li>
             </NavLink>
             <NavLink to={`/users/${user.id}`}>

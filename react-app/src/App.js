@@ -7,6 +7,7 @@ import Feed from "./components/Decks/Feed";
 import UserDecks from "./components/Decks/UsersDecks";
 import UserPage from "./components/UsersPage";
 import DeckPage from "./components/Decks/DeckPage";
+import DeckSearchResults from "./components/Decks/DeckSearchResults";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path="/decks/:id">
             <DeckPage />
+          </Route>
+          <Route path="/search/decks">
+            <DeckSearchResults />
           </Route>
         </Switch>
       )}
