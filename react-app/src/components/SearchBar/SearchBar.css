@@ -45,3 +45,38 @@
     outline-color: yellow;
     border-color: yellow;
 }
+
+.search-query-list {
+    list-style: none;
+    position: absolute;
+    margin-left: 29%;
+    margin-top: -2%;
+}
+
+.search-query-list-item {
+    background-color: #242221;
+    border: solid 1px white;
+    cursor: pointer;
+    width: 17rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    font-weight: bold;
+}
+
+.border-bottom {
+    border-bottom: none;
+}
+
+.border-top {
+    border-top: solid .5px gray;
+}
+
+.search-query-list-item:hover {
+    background-color:#181818;
+}
+
+.hidden {
+    display: hidden;
+}
