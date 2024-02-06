@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
-// import "./DeckSearch.css"
+import UserItem from './UserItem';
 import { thunkGetAllUsers } from '../../store/user';
 import UserSearchBar from '../SearchBar/UserSearchBar';
 import MissingUser from '../Missing/MissingUser';
@@ -23,8 +23,6 @@ const UserSearchResults = () => {
             if (element.includes(query)) filteredUsers.push(user)
         }
     }
-
-    // console.log(filteredUsers)
 
     return (
         <>
@@ -48,8 +46,8 @@ const UserSearchResults = () => {
                 <ul className='decks-list'>
                     {filteredUsers?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(user =>
                     (
-                        <li key={user?.id} className="deck-item">
-                            {user.username}
+                        <li key={user?.id} className="user-item">
+                            <UserItem user={user} />
                         </li>
                     )
                     )
