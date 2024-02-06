@@ -5,6 +5,7 @@ import UserItem from './UserItem';
 import { thunkGetAllUsers } from '../../store/user';
 import UserSearchBar from '../SearchBar/UserSearchBar';
 import MissingUser from '../Missing/MissingUser';
+import "./UserItem.css";
 
 
 const UserSearchResults = () => {

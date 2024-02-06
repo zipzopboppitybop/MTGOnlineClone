@@ -1,0 +1,33 @@
+.user-item {
+    margin: 1rem;
+    width: 15rem;
+    background-color: #232323;
+    text-align: center;
+    padding-top: 1rem;
+    border: solid 1px gray;
+    border-radius: .5rem;
+    transition: color .2s ease-out;
+}
+
+.user-item-stuff:hover {
+    color:orange;
+}
+
+.user-item-profile-pic {
+    font-size: 10rem;
+}
+
+.user-item-stats {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.stat {
+    font-size: 2rem;
+}
+
+.stats-name {
+    padding-left: .5rem;
+}
