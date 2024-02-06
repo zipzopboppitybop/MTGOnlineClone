@@ -17,7 +17,7 @@ const MissingUser = () => {
     return (
         <>
         {showElement ? (
-            <div>
+            <div className='loading-deck'> 
                 <Loading></Loading>
             </div>
         ) : (

@@ -20,12 +20,12 @@ export const thunkGetAllUsers = () => async (dispatch) => {
 	}
 };
 
-const initialState = { users: null };
+const initialState = { userList: null };
 
 export default function userReducer(state = initialState, action) {
 	switch (action.type) {
 		case GET_USERS:
-			return { ...state, users: action.users};
+			return { ...state, userList: action.users};
 
 		default:
 			return state;

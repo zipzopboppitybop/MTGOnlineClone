@@ -4,7 +4,6 @@ import { thunkGetAllDecks } from '../../../store/deck';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import DeckItem from '../DeckItem';
 import "./DeckSearch.css"
-import MainSearchBar from '../../SearchBar/MainSearchBar';
 import MissingDeck from '../../Missing/MissingDeck';
 import DeckSearchBar from '../../SearchBar/DeckSearchBar';
 
