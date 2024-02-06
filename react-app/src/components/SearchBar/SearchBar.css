@@ -63,6 +63,17 @@
     align-items: center;
     padding: .5rem;
     font-weight: bold;
+    justify-content: space-between;
+    text-overflow: ellipsis " [..]";
+    word-wrap: break-word;
+    white-space: pre-line;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.search-query-list-item::-webkit-scrollbar{ 
+    display: none;
 }
 
 .border-bottom {
@@ -79,4 +90,12 @@
 
 .hidden {
     display: hidden;
+}
+
+.default {
+    color: gray;
+    margin-top: -1rem;
+    font-size: .8rem;
+    position: absolute;
+    margin-left: 14rem;
 }

@@ -30,7 +30,7 @@ function MainSearchBar(){
                 <i className="fas fa-search profile-icon" />
             </div>
             <ul className={ulClassName}>  
-                <li className='search-query-list-item border-bottom'>Search Decks: {query} </li>
+                <li className='search-query-list-item border-bottom'>Search Decks: {query} <span className='default'>Default</span></li>
                 <li className='search-query-list-item border-bottom border-top'>Search Cards: {query}</li>
                 <li className='search-query-list-item border-top'>Search Users: {query}</li>
             </ul>
