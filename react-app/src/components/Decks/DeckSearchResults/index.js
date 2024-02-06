@@ -25,15 +25,12 @@ const DeckSearchResults = () => {
         }
     }
 
-    console.log(filteredDecks)
-    
-
     return (
         <>
             {decks ? (
                 <>
                     <h1 className='search-header'>Search Decks</h1>
-                    <MainSearchBar />
+                    <MainSearchBar query={query} />
                     <h2 id='feed-headline'>Results: {filteredDecks.length}</h2>
                 </>
             ) : (
@@ -45,7 +42,7 @@ const DeckSearchResults = () => {
             )}
 
 
-            {decks ? (
+            {filteredDecks.length > 0 ? (
                 <div className='feed'>
                 <ul className='decks-list'>
                     {filteredDecks?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(deck =>

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { thunkGetADeck } from '../../../store/deck';
-import Loading from '../../LoadingScreen';
-import DeckItem from '../DeckItem';
 import "./DeckPage.css"
 
 

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { thunkGetAllDecks } from '../../../store/deck';
-import Loading from '../../LoadingScreen';
 import DeckItem from '../DeckItem';
 import "./Feed.css"
 import MainSearchBar from '../../SearchBar/MainSearchBar';
+import MissingDeck from '../../Missing/MissingDeck';
 
 
 const Feed = () => {
@@ -33,7 +33,7 @@ const Feed = () => {
                 </ul>
                 </div>
             ) : (
-            <Loading />
+            <MissingDeck />
             )}
         </>
     )

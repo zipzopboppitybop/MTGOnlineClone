@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './SearchBar.css';
 
-function MainSearchBar(){
+function UserSearchBar(){
     const [query, setQuery] = useState('');
     let placeholder = "Deck name...";
     const handleSearch = () => {
@@ -30,4 +30,4 @@ function MainSearchBar(){
 	);
 }
 
-export default MainSearchBar;
+export default UserSearchBar;
