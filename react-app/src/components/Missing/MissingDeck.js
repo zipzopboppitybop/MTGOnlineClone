@@ -8,7 +8,7 @@ const MissingDeck = () => {
     const [showElement,setShowElement] = React.useState(true)
     useEffect(()=>{
       setTimeout(function() {
-        setShowElement(false)
+        return setShowElement(false)
            }, 2000);
          },
       
