@@ -6,6 +6,7 @@ import DeckItem from '../DeckItem';
 import "./DeckSearch.css"
 import MainSearchBar from '../../SearchBar/MainSearchBar';
 import MissingDeck from '../../Missing/MissingDeck';
+import DeckSearchBar from '../../SearchBar/DeckSearchBar';
 
 
 const DeckSearchResults = () => {
@@ -30,13 +31,13 @@ const DeckSearchResults = () => {
             {decks ? (
                 <>
                     <h1 className='search-header'>Search Decks</h1>
-                    <MainSearchBar query={query} />
+                    <DeckSearchBar query={query} />
                     <h2 id='feed-headline'>Results: {filteredDecks.length}</h2>
                 </>
             ) : (
                 <>
                     <h1 className='search-header'>Search Decks</h1>
-                    <MainSearchBar />
+                    <DeckSearchBar />
                     <h2 id='feed-headline'>Results: 0</h2>
                 </>
             )}
