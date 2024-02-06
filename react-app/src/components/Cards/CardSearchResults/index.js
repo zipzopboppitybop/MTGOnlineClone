@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { thunkGetAllDecks } from '../../../store/deck';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
-import DeckItem from '../DeckItem';
-import "./DeckSearch.css"
-import MissingDeck from '../../Missing/MissingDeck';
-import DeckSearchBar from '../../SearchBar/DeckSearchBar';
+
 
 
 const CardSearchResults = () => {

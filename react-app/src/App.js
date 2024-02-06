@@ -9,6 +9,7 @@ import UserPage from "./components/UsersPage";
 import DeckPage from "./components/Decks/DeckPage";
 import DeckSearchResults from "./components/Decks/DeckSearchResults";
 import UserSearchResults from "./components/Users";
+import CardSearchResults from "./components/Cards/CardSearchResults";
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,9 @@ function App() {
           </Route>
           <Route path="/search/users">
             <UserSearchResults />
+          </Route>
+          <Route path="/search/cards">
+            <CardSearchResults />
           </Route>
         </Switch>
       )}
