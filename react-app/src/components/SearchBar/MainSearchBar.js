@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './SearchBar.css';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 function MainSearchBar(){
     const [query, setQuery] = useState('');
@@ -30,7 +31,10 @@ function MainSearchBar(){
                 <i className="fas fa-search profile-icon" />
             </div>
             <ul className={ulClassName}>  
-                <li className='search-query-list-item border-bottom'>Search Decks: {query} <span className='default'>Default</span></li>
+                <NavLink to={`/search/decks/?query=${query}`}>
+                    <li className='search-query-list-item border-bottom'>Search Decks: {query} <span className='default'>Default</span></li>
+                </NavLink>
+                
                 <li className='search-query-list-item border-bottom border-top'>Search Cards: {query}</li>
                 <li className='search-query-list-item border-top'>Search Users: {query}</li>
             </ul>
