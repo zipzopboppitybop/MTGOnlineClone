@@ -8,6 +8,7 @@ import configureStore from "./store";
 import * as sessionActions from "./store/session";
 import * as deckActions from "./store/deck";
 import * as userActions from "./store/user";
+import * as cardActions from "./store/card";
 import App from "./App";
 
 import "./index.css";
@@ -19,6 +20,7 @@ if (process.env.NODE_ENV !== "production") {
 	window.sessionActions = sessionActions;
 	window.deckActions = deckActions;
 	window.userActions = userActions; 
+	window.cardActions = cardActions;
 }
 
 // Wrap the application with the Modal provider and render the Modal component

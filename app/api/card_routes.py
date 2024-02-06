@@ -20,12 +20,12 @@ def cards():
 @card_routes.route('/<name>')
 def card(name):
     """
-    Query for a card by name and return it in a dictionary
+    Query for a card by name and return them in a dictionary
     """
-    card = Card.find(name)
+    cards = [{"card": card.__dict__} for card in Card.where(name=name).all()]
     if card is None:
         return { 'errors': ['Cards not found!'] }, 404
 
-    return card.__dict__
+    return cards
 
 
