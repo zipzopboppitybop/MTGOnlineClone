@@ -34,13 +34,13 @@ const DeckSearchResults = () => {
                 <>
                     <h1 className='search-header'>Search Decks</h1>
                     <MainSearchBar />
-                    <h4 id='feed-headline'>Results: {filteredDecks.length}</h4>
+                    <h2 id='feed-headline'>Results: {filteredDecks.length}</h2>
                 </>
             ) : (
                 <>
                     <h1 className='search-header'>Search Decks</h1>
                     <MainSearchBar />
-                    <h4 id='feed-headline'>Results: 0</h4>
+                    <h2 id='feed-headline'>Results: 0</h2>
                 </>
             )}
 

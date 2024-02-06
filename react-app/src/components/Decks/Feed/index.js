@@ -17,7 +17,7 @@ const Feed = () => {
     return (
         <>
             <MainSearchBar />
-            <h4 id='feed-headline'>Recent Decks</h4>
+            <h2 id='feed-headline'>Recent Decks</h2>
 
             {decks ? (
                 <div className='feed'>
