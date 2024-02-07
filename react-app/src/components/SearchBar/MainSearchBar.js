@@ -34,7 +34,7 @@ function MainSearchBar(){
                 <NavLink to={`/search/decks/?query=${query}`}>
                     <li className='search-query-list-item border-bottom'>Search Decks: {query} <span className='default'>Default</span></li>
                 </NavLink>
-                <NavLink to={`/search/cards/?query=${query}`}>
+                <NavLink to={`/search/cards/?query=${query}/?page=1`}>
                     <li className='search-query-list-item border-bottom border-top'>Search Cards: {query}</li>
                 </NavLink>
                 <NavLink to={`/search/users/?query=${query}`}>

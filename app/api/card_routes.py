@@ -17,13 +17,13 @@ def cards():
     return cards
 
 
-@card_routes.route('/<name>')
-def card(name):
+@card_routes.route('/<name>/<int:page>')
+def card(name,page):
     """
     Query for a card by name and return them in a dictionary
     """
     # cards = [{"card": card.__dict__} for card in Card.where(name=name).all()]
-    cards = [card.__dict__ for card in Card.where(name=name).all()]
+    cards = [card.__dict__ for card in Card.where(page=page).where(pageSize=100).where(name=name).all()]
     if card is None:
         return { 'errors': ['Cards not found!'] }, 404
 

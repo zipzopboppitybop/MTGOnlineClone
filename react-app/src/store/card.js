@@ -24,8 +24,8 @@ export const thunkGetAllCards = () => async (dispatch) => {
     }
 }
 
-export const thunkGetCardsByName = (name) => async (dispatch) => {
-    const response = await fetch(`/api/cards/${name}`)
+export const thunkGetCardsByName = (name,page) => async (dispatch) => {
+    const response = await fetch(`/api/cards/${name}/${page}`)
 
     if (response.ok) {
         const cards = await response.json();

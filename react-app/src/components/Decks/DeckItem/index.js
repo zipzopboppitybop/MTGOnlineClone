@@ -1,6 +1,4 @@
 import React from "react";
-// import { useSelector, useDispatch } from "react-redux"
-// import { NavLink } from "react-router-dom";
 import thumbnail from "../../../images/deckbox.png"
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 

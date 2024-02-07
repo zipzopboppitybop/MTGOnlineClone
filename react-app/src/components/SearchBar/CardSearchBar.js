@@ -4,8 +4,9 @@ import './SearchBar.css';
 
 function CardSearchBar(){
     const [query, setQuery] = useState('');
+    const [page, setPage] = useState(1);
     const handleSearch = () => {
-        window.location.href = `/search/cards/?query=${query}`;
+        window.location.href = `/search/cards/?query=${query}/?page=1`;
     };
 
 	return (

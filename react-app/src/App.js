@@ -41,7 +41,7 @@ function App() {
           <Route path="/search/users">
             <UserSearchResults />
           </Route>
-          <Route path="/search/cards">
+          <Route path="/search/cards/">
             <CardSearchResults />
           </Route>
         </Switch>
