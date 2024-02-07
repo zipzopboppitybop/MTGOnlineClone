@@ -13,19 +13,14 @@ const CardSearchResults = () => {
     const cards = useSelector(state => state.cards.cardList);
     const filteredCards = cards?.filter((v,i,a)=>a.findIndex(v2=>['name', 'multiverseId'].every(k=>v2[k] ===v[k]))===i)
     const location = useLocation()
-    const query = new URLSearchParams(location.search).get('query').toLowerCase().split("/");
+    const parameters = new URLSearchParams(location.search).get('query').toLowerCase().split("/");
+    const query = parameters[0];
+    var regex = /\d+/g;
+    const num = parameters[1].match(regex);
+    const page = parseInt(num);
     useEffect(() => {
-        dispatch(thunkGetCardsByName(query[0], 1))
-    }, [dispatch])
-
-    if (filteredCards) {
-        for (let card of filteredCards) {
-            console.log(card.image_url)
-        }
-    }
-
-    
-
+        dispatch(thunkGetCardsByName(query, page))
+    }, [dispatch, query, page])
     return (
         <>
             {cards ? (
