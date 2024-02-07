@@ -1,38 +1,29 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from "react-router-dom";
 import { thunkGetADeck } from '../../../store/deck';
+import MissingDeck from '../../Missing/MissingDeck';
 import "./DeckPage.css"
 
 
 const DeckPage = () => {
     const dispatch = useDispatch()
-    const deck = useSelector(state => state.decks);
-    console.log(deck)
+    const { id } = useParams();
+    const deck = useSelector(state => state.decks.currentDeck);
     useEffect(() => {
-        dispatch(thunkGetADeck())
-    }, [dispatch,])
+        dispatch(thunkGetADeck(id))
+    }, [dispatch, id])
 
     return (
-        <h1>Hello</h1>
-        // <>
-        // <h4 id='feed-headline'>Recent Decks</h4>
-        // {decks ? (
-        //     <div className='feed'>
-        //     <ul className='decks-list'>
-        //         {Object?.values(decks)?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt))?.map(deck =>
-        //         (
-        //             <li key={deck?.id} className="deck-item">
-        //                 <DeckItem deck={deck} />
-        //             </li>
-        //         )
-        //         )
-        //         }
-        //     </ul>
-        // </div>
-        // ) : (
-        //     <Loading />
-        // )}
-        // </>
+        <>
+        {deck ? (
+            <div>
+                <h1>{deck.name}</h1>
+            </div>
+        ) : (
+            <MissingDeck />
+        )}
+        </>
     )
 }
 
