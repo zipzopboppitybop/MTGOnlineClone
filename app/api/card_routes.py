@@ -29,4 +29,16 @@ def card(name,page):
 
     return cards
 
+@card_routes.route('/card/<id>')
+def card_id(id):
+    """
+    Query for a card by id and return them in a dictionary
+    """
+    # cards = [{"card": card.__dict__} for card in Card.where(name=name).all()]
+    card = Card.find(id).__dict__
+    if card is None:
+        return { 'errors': ['Cards not found!'] }, 404
+
+    return card
+
 

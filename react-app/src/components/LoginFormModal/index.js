@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import "./LoginForm.css";
+import thumbnail from "../../images/deckbox.png";
 
 function LoginFormModal() {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ function LoginFormModal() {
   const [errors, setErrors] = useState([]);
   const { closeModal } = useModal();
   const history = useHistory();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +29,7 @@ function LoginFormModal() {
   return (
     <>
     <div className="login-form-container">
+      <img src={thumbnail} className="login-logo" alt="logo" />
       <h1>Log In</h1>
         <form className="form" onSubmit={handleSubmit}>
           <ul>
@@ -37,7 +40,7 @@ function LoginFormModal() {
           <label>
             Email
             <input
-              className="login-input"
+              className="login-input email-input"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
